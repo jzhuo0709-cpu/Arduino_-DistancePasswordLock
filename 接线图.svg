@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="680" viewBox="0 0 1080 680">
+<style>
+  text{font-family:"Microsoft YaHei",Arial,sans-serif;fill:#1f2937}
+  .title{font-size:32px;font-weight:700}.sub{font-size:17px}.head{font-size:22px;font-weight:700}
+  .pin{font-size:20px}.note{font-size:17px}.box{fill:#f8fafc;stroke:#64748b;stroke-width:2;rx:16}
+  .line{stroke-width:4;fill:none;stroke-linecap:round}.blue{stroke:#2563eb}.orange{stroke:#ea580c}.green{stroke:#16a34a}.purple{stroke:#7c3aed}
+</style>
+<rect width="1080" height="680" fill="#eef4f8"/>
+<text x="42" y="50" class="title">距离数字密码锁 · 接线图</text>
+<text x="42" y="78" class="sub">所有信号共地；按钮使用 Arduino 内部上拉；舵机由独立稳定 5V 供电。</text>
+<rect x="55" y="120" width="260" height="410" class="box"/>
+<text x="82" y="157" class="head">Arduino Uno R3</text>
+<text x="85" y="198" class="pin">D2 → 按钮 A</text>
+<text x="85" y="234" class="pin">D3 → 按钮 B</text>
+<text x="85" y="270" class="pin">D4 → 按钮 C</text>
+<text x="85" y="310" class="pin">D6 → TRIG</text>
+<text x="85" y="346" class="pin">D7 ← ECHO</text>
+<text x="85" y="386" class="pin">D9 → 舵机信号</text>
+<text x="85" y="426" class="pin">A4 → SDA</text>
+<text x="85" y="462" class="pin">A5 → SCL</text>
+<text x="85" y="503" class="pin">5V / GND</text>
+<rect x="495" y="119" width="310" height="148" class="box"/>
+<text x="520" y="156" class="head">三个按钮</text>
+<text x="520" y="190" class="pin">A：记录当前距离</text>
+<text x="520" y="220" class="pin">B：撤销　C：确认</text>
+<text x="520" y="248" class="note">每个按钮另一侧 → GND</text>
+<rect x="495" y="285" width="310" height="126" class="box"/>
+<text x="520" y="322" class="head">HC-SR04 超声波</text>
+<text x="520" y="357" class="pin">TRIG D6　ECHO D7</text>
+<text x="520" y="388" class="note">VCC → Uno 5V，GND → Uno GND</text>
+<rect x="495" y="430" width="310" height="110" class="box"/>
+<text x="520" y="466" class="head">四针 I²C OLED</text>
+<text x="520" y="499" class="pin">SDA A4　SCL A5</text>
+<text x="520" y="526" class="note">VCC 按模块标称，GND 共地</text>
+<rect x="840" y="285" width="195" height="255" class="box"/>
+<text x="865" y="323" class="head">9g 舵机</text>
+<text x="865" y="357" class="pin">信号 → D9</text>
+<text x="865" y="394" class="pin">红线 → 外部 5V+</text>
+<text x="865" y="430" class="pin">地线 → 5V−</text>
+<text x="865" y="463" class="note">5V− 还须接 Uno GND</text>
+<path d="M315 205 H455 V205 H495" class="line blue"/>
+<path d="M315 328 H455 V340 H495" class="line orange"/>
+<path d="M315 444 H455 V485 H495" class="line green"/>
+<path d="M315 385 H823 V350 H840" class="line purple"/>
+<rect x="55" y="574" width="980" height="74" fill="#fff7ed" stroke="#fb923c" stroke-width="2" rx="12"/>
+<text x="76" y="603" class="note">注意：不要用 Uno 的 5V 引脚给舵机供电。先确认按钮两侧接法及 OLED 针脚顺序。</text>
+<text x="76" y="631" class="note">HC-SR04 正对纸板，依次在 15 / 25 / 35 cm 按 A 记录，最后按 C 确认。</text>
+</svg>
+
